@@ -1,0 +1,18 @@
+body {
+    font-family: "microsoft yahei";
+}
+.head{
+    background-color: #3F485B;
+    color: #ffffff;
+}
+.head > div {
+    padding: .6em 0;
+}
+.title {
+    font-size: 1.2em;
+}
+/*public*/
+
+.colorFFF{
+    color: #ffffff;
+}

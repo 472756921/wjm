@@ -1,0 +1,9 @@
+.textContent {
+    overflow: scroll;
+    /*background-color: #efeef5;*/
+    padding-top: .6em;
+}
+.textContent p {
+    line-height: 1.8em;
+    font-size: .8em;
+}

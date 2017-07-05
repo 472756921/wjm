@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>检查结果</title>
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+</head>
+<body>
+    <div class="am-g head">
+        <div class="am-u-sm-12 am-text-center">
+            <span class="am-u-sm-4 am-text-left"><i class="fa fa-angle-left" aria-hidden="true"></i> 返回</span>
+            <span class="am-u-sm-4 title">检查结果</span>
+            <span class="am-u-sm-4 am-text-right"></span>
+        </div>
+    </div>
+    <div class="am-g am-text-sm">
+        <div class="content">
+            <div class="am-u-sm-12 am-margin-vertical-xs">
+                <div>
+                    <div class="am-text-default">细胞学筛查结果</div>
+                    <div class="am-text-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 暂无结果，请筛查后耐心等待</div>
+                    <div class="am-u-sm-12 am-padding-0">
+                        <span class="am-u-sm-5">2012-12-12</span>
+                        <span class="am-u-sm-4">细胞学筛查</span>
+                        <span class="am-u-sm-3 am-text-success">阴性</span>
+                        <span class="am-u-sm-3 am-text-danger">阳性</span>
+                    </div>
+                    <div class="am-text-success"><i class="fa fa-check-square" aria-hidden="true"></i> 您的细胞学筛查为阴性，可以接种疫苗</div>
+                    <div class="am-text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 对不起，您的细胞学筛查为阳性，不能接种疫苗</div>
+                    <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+                </div>
+               <div>
+                   <div class="am-text-default">疫苗接种记录</div>
+                   <table class="am-table am-table-bordered ">
+                       <thead>
+                       <tr class="thead">
+                           <th>次数</th>
+                           <th>时间</th>
+                           <th>状态</th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       <tr>
+                           <td>第一次</td>
+                           <td>2012-12-12</td>
+                           <td class="am-text-success">已接种</td>
+                       </tr>
+                       <tr>
+                           <td>第二次</td>
+                           <td>2012-12-18</td>
+                           <td class="am-text-danger">未接种</td>
+                       </tr>
+                       <tr>
+                       </tbody>
+                   </table>
+                   <div class="am-text-success"><i class="fa fa-check-square" aria-hidden="true"></i> 接种已完成</div>
+                   <div class="am-text-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 请按时前往医院，接受第二次接种</div>
+                   <div class="am-text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 您已经错过接种时间，请联系客服人员处理</div>
+               </div>
+            </div>
+        </div>
+        <br/>
+        <button type="button" class="am-margin-bottom am-btn am-btn-warning am-center">预约接种(条件)</button>
+    </div>
+</body>
+<style>
+    .textinput{
+        border: 1px solid #ddd;
+    }
+    .content{
+        overflow: auto;
+    }
+    .thead{
+        background-color: #f9f9f9;
+    }
+</style>
+</html>

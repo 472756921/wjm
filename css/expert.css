@@ -1,0 +1,32 @@
+.title1{
+    color: #ffffff;
+    font-weight: normal;
+}
+.exbk{
+    background-color: #90a4ae;
+}
+.loginInput{
+    border: none;
+    padding: .6em .5em;
+    outline:none;
+}
+.up{
+    border-bottom: 1px solid #90a4ae;
+    border-radius: 1.2em 0 0 0;
+}
+.do{
+
+    border-radius:0 0 1.2em 0;
+}
+.btnUser{
+    background: none;
+    border: 1px solid #fff;
+    padding: .6em 1.6em;
+    color: #ffffff;
+    top: 10px;
+    border-radius: .4em;
+    border-radius: .4em;
+}
+textarea{
+    resize: none;
+}
