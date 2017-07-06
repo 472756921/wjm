@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>注射服务</title>
+    <title>预约注射</title>
     <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
     <link rel="stylesheet" href="../../css/head.css">
@@ -14,7 +14,7 @@
     <div class="am-g head">
         <div class="am-u-sm-12 am-text-center">
             <span class="am-u-sm-4 am-text-left"><i class="fa fa-angle-left" aria-hidden="true"></i> 返回</span>
-            <span class="am-u-sm-4 title">注射服务</span>
+            <span class="am-u-sm-4 title">预约注射</span>
             <span class="am-u-sm-4 am-text-right"></span>
         </div>
     </div>
@@ -23,25 +23,69 @@
             <p class="am-text-sm am-padding-sm">
                 确认预约接种服务，由接种人自带疫苗前往XXX医院进行接种服务
             </p>
+            <p class="am-text-sm am-padding-sm am-text-success">
+                您已预约注射服务，<span class="am-text-warning">尚未确认支付状态</span>
+            </p>
+            <p class="am-text-sm am-padding-sm am-text-success">
+                您已预约注射服务
+            </p>
+            <p class="am-text-sm am-padding-sm am-text-warning">
+                您已选择自助服务
+            </p>
             <div class="am-u-sm-12">服务费(<span class="am-text-warning">非疫苗费用</span>)：<span class="am-text-danger">￥5000.00</span></div>
             <div class="am-u-sm-12">接种地点：成都XXXX医院</div>
         </div>
         <br/>
         <br/>
         <br/>
-        <button type="button" class="am-margin-bottom am-btn am-btn-warning am-center"  data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 300, height: 125}">确认预约</button>
-        <small class="am-u-sm-12 am-text-center am-text-warning">（ 预约成功后将通过短信通知您具体接种时间和周期 ）</small>
-
+        <button type="button" class="am-margin-bottom am-btn am-btn-warning am-center"  data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0}">确认预约</button>
+        <button type="button" class="am-margin-bottom am-btn am-btn-success am-center"  data-am-modal="{target: '#doc-modal-3', closeViaDimmer: 0}">已转款，申请确认</button>
+        <button type="button" class="am-margin-bottom am-btn am-btn-success am-center">支付结果</button>
+        <small class="am-u-sm-12 am-text-center am-text-warning am-margin-bottom">（ 预约成功后将通过短信通知您具体接种时间和周期 ）</small>
+        <a class="am-text-center am-center am-u-sm-12"  data-am-modal="{target: '#doc-modal-2', closeViaDimmer: 0}">暂不预约，自行前往购买、注射疫苗<br/>(无需服务费用)</a>
         <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
             <div class="am-modal-dialog">
                 <div class="am-modal-hd">服务费支付
                     <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
                 </div>
                 <div class="am-modal-bd">
-                   用户需使用银行卡向账户XXXXX支付服务费用（￥5000.00），并备注个人身份证号码，姓名等信息，付款后再向系统确认转账信息。
+                   用户需使用银行卡向账户XXXXX支付服务费用（￥5000.00），并备注个人身份证号码，姓名等信息，付款后再向系统确认转账信息。<br/>
+                    <button type="button" class="am-margin am-btn am-btn-primary am-btn-sm js-modal-close" onclick="sure(1)">确认</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-2">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">自助服务
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-bd">
+                    <div class="am-text-left">您选择自行前往澳门购买注射和注射疫苗？</div>
+                    <div class="am-text-left">地址：澳门</div>
+                    <div class="am-text-left">联系方式：3923-123-322</div>
+                    <button type="button" class="am-margin am-btn am-btn-primary am-btn-sm" onclick="sure(2)">确认</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-3">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">确认申请已发出
+                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                </div>
+                <div class="am-modal-bd">
+                    管理员将尽快确认您的订单，待确认后将第一时间通知您！
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    function sure(id) {
+        var $modal1 = $('#doc-modal-'+id);
+        $modal1.modal('close');
+    }
+
+</script>
 </html>
