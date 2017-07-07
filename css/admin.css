@@ -1,3 +1,84 @@
-.back{
-    background-color: #fff;
+html, body {
+    background:  url("../img/adminBK.png");
+    height: 100%;
+    overflow: auto;
+}
+.loginInfo {
+    border: 1px solid red;
+}
+
+/*index*/
+.headerUser {
+    background: #000;
+    color: #ffffff;
+    padding: 10px;
+}
+.nav {
+    padding: 30px;
+    overflow: auto;
+}
+.navContent{
+    overflow: auto;
+    background:  url("../img/navBK.png");
+}
+.navList {
+    color: #ffffff;
+    padding: 12px 0;
+    text-align: center;
+    float: left!important;
+}
+.navList:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+.navListIcon {
+    font-size: 2em!important;
+}
+.navContent2{
+    background: #444;
+}
+.nav2 {
+    overflow: auto;
+    padding: 14px;
+}
+.nav2 > button {
+    margin: 0 2px;
+}
+.userNavBtn {
+    border-radius: 6px;
+    background: #555;
+    color: #eee;
+    border: 1px solid #333;
+    border-top: 2px solid #666;
+}
+.userNavBtnActive {
+    border-radius: 6px;
+    background: #333;
+    color: #ccc;
+    border: 2px solid #222;
+    border-bottom: 2px solid #555;
+}
+.widgets {
+    padding: 40px 30px 20px 30px;
+}
+.dataPlan {
+    padding: 28px;
+    background: #fff;
+    text-align: center;
+}
+.dataPlan > div {
+    font-size: 40px;
+    font-weight: bold;
+}
+.dataPlan > span {
+    color: #999;
+}
+
+.dataLine {
+    margin: 20px 0;
+}
+.footer{
+    bottom: 0px;
+    color: #999;
+    overflow: auto;
 }

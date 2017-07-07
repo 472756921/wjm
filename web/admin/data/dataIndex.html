@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卫佳美信息管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script src="http://cdn.bootcss.com/echarts/3.6.2/echarts.min.js"></script>
+</head>
+<body>
+    <div class="am-g">
+        <div class="am-u-sm-12 am-padding-0 content">
+            <div class="headerUser">
+                <div class="am-u-sm-10 am-u-sm-centered">
+                    <span class="am-text-lg">卫佳美信息管理系统</span>
+                    <button type="button" class="am-btn am-btn-danger am-fr am-btn-sm am-margin-horizontal">退出</button>
+                    <span class="am-fr">admin <i class="fa fa-caret-down" aria-hidden="true"></i> </span>
+                </div>
+            </div>
+            <div class="navContent am-u-sm-12 ">
+                <div class="am-u-sm-10 nav am-u-sm-centered">
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-bar-chart navListIcon" aria-hidden="true"></i>
+                        <div class="">数据统计</div>
+                    </div>
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-user navListIcon" aria-hidden="true"></i>
+                        <div class="">团队管理</div>
+                    </div>
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-users navListIcon" aria-hidden="true"></i>
+                        <div class="">用户管理</div>
+                    </div>
+                </div>
+            </div>
+            <div class="navContent2">
+                <div class="nav2 am-u-sm-10 am-u-sm-centered">
+                    <button class="am-btn userNavBtnActive">实时数据</button>
+                    <button class="am-btn userNavBtn">月数据</button>
+                    <button class="am-btn userNavBtn">年数据</button>
+                </div>
+            </div>
+            <div class="data am-u-sm-10 am-u-sm-centered">
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>19386</div>
+                        <span>当前注册人数</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>3309</div>
+                        <span>预约筛查人数</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>1209</div>
+                        <span>预约注射人数</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>948</div>
+                        <span>完成注射人数</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dataLine am-u-sm-10 am-u-sm-centered am-padding-0">
+                <div id="main" class="am-u-sm-12 am-margin-top-sm" style="height:400px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer am-u-sm-12 am-text-center am-padding-sm am-margin-vertical-sm">
+        © 2012 Freebiesgallery. Designed By: Asif Aleem
+    </div>
+</body>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '统计数据堆叠图（周）'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['当前注册人数','预约筛查人数','预约注射人数','完成注射人数']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一','周二','周三','周四','周五','周六','周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'当前注册人数',
+                type:'line',
+                stack: '总量',
+                data:[120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name:'预约筛查人数',
+                type:'line',
+                stack: '总量',
+                data:[220, 182, 191, 234, 290, 330, 310]
+            },
+            {
+                name:'预约注射人数',
+                type:'line',
+                stack: '总量',
+                data:[150, 232, 201, 154, 190, 330, 410]
+            },
+            {
+                name:'完成注射人数',
+                type:'line',
+                stack: '总量',
+                data:[320, 332, 301, 334, 390, 330, 320]
+            },
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</html>

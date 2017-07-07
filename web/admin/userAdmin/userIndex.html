@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卫佳美信息管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+</head>
+<body>
+    <div class="am-g">
+        <div class="am-u-sm-12 am-padding-0 content">
+            <div class="headerUser">
+                <div class="am-u-sm-10 am-u-sm-centered">
+                    <span class="am-text-lg">卫佳美信息管理系统</span>
+                    <button type="button" class="am-btn am-btn-danger am-fr am-btn-sm am-margin-horizontal">退出</button>
+                    <span class="am-fr">admin <i class="fa fa-caret-down" aria-hidden="true"></i> </span>
+                </div>
+            </div>
+            <div class="navContent am-u-sm-12 ">
+                <div class="am-u-sm-10 nav am-u-sm-centered">
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-bar-chart navListIcon" aria-hidden="true"></i>
+                        <div class="">数据统计</div>
+                    </div>
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-user navListIcon" aria-hidden="true"></i>
+                        <div class="">团队管理</div>
+                    </div>
+                    <div class="navList am-u-md-2 am-u-lg-2">
+                        <i class="fa fa-users navListIcon" aria-hidden="true"></i>
+                        <div class="">用户管理</div>
+                    </div>
+                </div>
+            </div>
+            <div class="navContent2">
+                <div class="nav2 am-u-sm-10 am-u-sm-centered">
+                    <button class="am-btn userNavBtnActive">用户列表</button>
+                    <button class="am-btn userNavBtn">待筛查用户</button>
+                    <button class="am-btn userNavBtn">已筛查用户</button>
+                    <button class="am-btn userNavBtn">自助接种用户</button>
+                    <button class="am-btn userNavBtn">待接种用户支付确认</button>
+                    <button class="am-btn userNavBtn">用户接种</button>
+                </div>
+            </div>
+            <div class="data am-u-sm-10 am-u-sm-centered">
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>19386</div>
+                        <span>用户总数</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>3309</div>
+                        <span>已筛查用户</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>1209</div>
+                        <span>接种中用户</span>
+                    </div>
+                </div>
+                <div class="widgets am-u-sm-3">
+                    <div class="am-u-sm-12 dataPlan">
+                        <div>948</div>
+                        <span>接种完成用户</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dataLine am-u-sm-10 am-u-sm-centered am-padding-0">
+                <div class="am-g">
+                    <div class="am-u-lg-3 am-fr">
+                        <div class="am-input-group">
+                            <input type="text" class="am-form-field" placeholder="用户查询（电话或身份证）">
+                            <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-warning" type="button"><span class="am-icon-search"></span> </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dataLine am-u-sm-10 am-u-sm-centered am-padding-0">
+                <table class="am-table am-table-bordered">
+                    <thead>
+                    <tr>
+                        <th>用户电话</th>
+                        <th>身份证号码</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>住址</th>
+                        <th>注册时间</th>
+                        <th>状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Amaze UI</td>
+                        <td>http://amazeui.org</td>
+                        <td>2012-10-01</td>
+                        <td>2012-10-01</td>
+                        <td>2012-10-01</td>
+                        <td>2012-10-01</td>
+                        <td>2012-10-01</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer am-u-sm-12 am-text-center am-padding-sm am-margin-vertical-sm">
+        © 2012 Freebiesgallery. Designed By: Asif Aleem
+    </div>
+</body>
+</html>
