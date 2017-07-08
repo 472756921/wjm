@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../../css/admin.css">
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
-    <script src="http://cdn.bootcss.com/echarts/3.6.2/echarts.min.js"></script>
 </head>
 <body>
     <div class="am-g">
@@ -40,39 +39,85 @@
             </div>
             <div class="navContent2">
                 <div class="nav2 am-u-sm-10 am-u-sm-centered">
-                    <button class="am-btn userNavBtn">实时数据</button>
-                    <button class="am-btn userNavBtnActive">月数据</button>
-                    <button class="am-btn userNavBtn">年数据</button>
+                    <button class="am-btn userNavBtn">团队成员</button>
+                    <button class="am-btn userNavBtn">高级合伙人</button>
+                    <button class="am-btn userNavBtn">中级合伙人</button>
+                    <button class="am-btn userNavBtnActive">初级合伙人</button>
                 </div>
             </div>
             <div class="data am-u-sm-10 am-u-sm-centered">
                 <div class="widgets am-u-sm-3">
                     <div class="am-u-sm-12 dataPlan">
                         <div>19386</div>
-                        <span>当月注册人数</span>
+                        <span>团队成员总数</span>
                     </div>
                 </div>
                 <div class="widgets am-u-sm-3">
                     <div class="am-u-sm-12 dataPlan">
                         <div>3309</div>
-                        <span>当月预约筛查人数</span>
+                        <span>高级合伙人</span>
                     </div>
                 </div>
                 <div class="widgets am-u-sm-3">
                     <div class="am-u-sm-12 dataPlan">
                         <div>1209</div>
-                        <span>当月预约注射人数</span>
+                        <span>中级合伙人</span>
                     </div>
                 </div>
                 <div class="widgets am-u-sm-3">
                     <div class="am-u-sm-12 dataPlan">
                         <div>948</div>
-                        <span>当月完成注射人数</span>
+                        <span>初级合伙人</span>
                     </div>
                 </div>
             </div>
             <div class="dataLine am-u-sm-10 am-u-sm-centered am-padding-0">
-                <div id="main" class="am-u-sm-12 am-margin-top-sm" style="height:400px"></div>
+                <div class="am-g">
+                    <div class="am-u-lg-3 am-fr">
+                        <div class="am-input-group">
+                            <input type="text" class="am-form-field" placeholder="用户查询（电话或身份证）">
+                            <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-warning" type="button"><span class="am-icon-search"></span> </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dataLine am-u-sm-10 am-u-sm-centered am-padding-0">
+                <div class="am-u-sm-6">
+                    <div class="am-text-lg">刘德华 <small>&nbsp;&nbsp;&nbsp;女 23</small><small>&nbsp;&nbsp;&nbsp;510703199308290512</small></div>
+                    <div>17780029394 <span>&nbsp;&nbsp;&nbsp; 17780029394@qq.com</span></div>
+                    <div>成都华西坝*回龙街*德尚国际*705</div>
+                    <br/>
+                    <div>上级：张学友</div>
+                    <div>关联：张学友</div>
+                    <div>关联合伙人数：123</div>
+                </div>
+                <div class="am-u-sm-6">
+                    <pre class="am-text-lg"><div>个人累计销量：200</div><div>关联团队累计销量：200</div></pre>
+                </div>
+                <div class="am-u-sm-6">
+                    <pre class="am-text-lg"><div>上月个人销量：200</div><div>关联团队累计销量：200</div></pre>
+                </div>
+
+                <table class="am-table am-table-bordered">
+                    <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>个人累计销量</th>
+                        <th>关联团队累计销量</th>
+                        <th>发展人数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>http://amazeui.org</td>
+                        <td>2012-10-01</td>
+                        <td>2012-10-01</td>
+                        <td>12</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -80,76 +125,4 @@
         © 2012 Freebiesgallery. Designed By: Asif Aleem
     </div>
 </body>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
-
-    // 指定图表的配置项和数据
-    option = {
-        title: {
-            text: '统计数据堆叠图（月）'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data:['当月注册人数','当月预约筛查人数','当月预约注射人数', '当月自助注射人数','当月完成注射人数']
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: ['1月','2月','3月','4月','5月','6月','7月','8月', '9月', '10月', '11月', '12月']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: [
-            {
-                name:'当月注册人数',
-                type:'line',
-                stack: '总量',
-                data:[120, 132, 101, 134, 90, 230, 210, 210, 100]
-            },
-            {
-                name:'当月预约筛查人数',
-                type:'line',
-                stack: '总量',
-                data:[220, 182, 191, 234, 290, 330, 310, 210, 310]
-            },
-            {
-                name:'当月预约注射人数',
-                type:'line',
-                stack: '总量',
-                data:[150, 232, 201, 154, 190, 330, 410, 410, 110, 210, 410, 410]
-            },
-            {
-                name:'当月自助注射人数',
-                type:'line',
-                stack: '总量',
-                data:[13, 11, 12, 2, 34, 33, 2, 0, 12, 2, 1, 46]
-            },
-            {
-                name:'当月完成注射人数',
-                type:'line',
-                stack: '总量',
-                data:[220, 332, 301, 334, 390, 330, 320]
-            },
-        ]
-    };
-
-
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-</script>
 </html>

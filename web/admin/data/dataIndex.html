@@ -40,7 +40,7 @@
             </div>
             <div class="navContent2">
                 <div class="nav2 am-u-sm-10 am-u-sm-centered">
-                    <button class="am-btn userNavBtnActive">实时数据</button>
+                    <button class="am-btn userNavBtnActive">总体数据</button>
                     <button class="am-btn userNavBtn">月数据</button>
                     <button class="am-btn userNavBtn">年数据</button>
                 </div>
@@ -86,14 +86,12 @@
 
     // 指定图表的配置项和数据
     option = {
-        title: {
-            text: '统计数据堆叠图（周）'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data:['当前注册人数','预约筛查人数','预约注射人数','完成注射人数']
+        color: ['#cc0000'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
         },
         grid: {
             left: '3%',
@@ -101,44 +99,27 @@
             bottom: '3%',
             containLabel: true
         },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
+        xAxis : [
+            {
+                type : 'category',
+                data : ['当前注册人数', '预约筛查人数', '预约注射人数', '自助注射人数', '完成注射人数'],
+                axisTick: {
+                    alignWithLabel: true
+                }
             }
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: ['周一','周二','周三','周四','周五','周六','周日']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: [
+        ],
+        yAxis : [
             {
-                name:'当前注册人数',
-                type:'line',
-                stack: '总量',
-                data:[120, 132, 101, 134, 90, 230, 210]
-            },
+                type : 'value'
+            }
+        ],
+        series : [
             {
-                name:'预约筛查人数',
-                type:'line',
-                stack: '总量',
-                data:[220, 182, 191, 234, 290, 330, 310]
-            },
-            {
-                name:'预约注射人数',
-                type:'line',
-                stack: '总量',
-                data:[150, 232, 201, 154, 190, 330, 410]
-            },
-            {
-                name:'完成注射人数',
-                type:'line',
-                stack: '总量',
-                data:[320, 332, 301, 334, 390, 330, 320]
-            },
+                name:'总人数',
+                type:'bar',
+                barWidth: '60%',
+                data:[3110, 2252, 1200, 231, 2334]
+            }
         ]
     };
 
